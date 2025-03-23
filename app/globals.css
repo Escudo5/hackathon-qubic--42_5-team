@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 140 50% 98%;
+    --foreground: 140 30% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 140 30% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 140 30% 10%;
+
+    --primary: 140 50% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 140 30% 96%;
+    --secondary-foreground: 140 30% 30%;
+
+    --muted: 140 20% 96%;
+    --muted-foreground: 140 10% 40%;
+
+    --accent: 140 70% 90%;
+    --accent-foreground: 140 30% 30%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 140 20% 90%;
+    --input: 140 20% 90%;
+    --ring: 140 50% 50%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 140 20% 90%;
+
+    --card: 220 20% 13%;
+    --card-foreground: 140 20% 90%;
+
+    --popover: 220 20% 13%;
+    --popover-foreground: 140 20% 90%;
+
+    --primary: 140 50% 50%;
+    --primary-foreground: 220 20% 10%;
+
+    --secondary: 220 20% 16%;
+    --secondary-foreground: 140 20% 90%;
+
+    --muted: 220 20% 16%;
+    --muted-foreground: 140 20% 60%;
+
+    --accent: 220 20% 16%;
+    --accent-foreground: 140 20% 90%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 140 20% 90%;
+
+    --border: 220 20% 16%;
+    --input: 220 20% 16%;
+    --ring: 140 50% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 dark:bg-black/30 backdrop-blur-sm border border-white/20 dark:border-gray-800/30;
+  }
+
+  .glass-input {
+    @apply bg-white/80 dark:bg-black/30 backdrop-blur-sm border border-green-200 dark:border-gray-800/30 focus-visible:ring-green-400;
+  }
+
+  .btn-primary {
+    @apply bg-green-500 hover:bg-green-600 text-white rounded-full transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border border-green-300 dark:border-green-700 text-green-700 dark:text-green-300 hover:bg-green-50 dark:hover:bg-green-900/50 rounded-full transition-colors;
+  }
+
+  .badge-primary {
+    @apply bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300 border-green-200 dark:border-green-800;
+  }
+
+  .badge-secondary {
+    @apply bg-qubic/20 text-qubic-dark dark:text-qubic-light border-qubic/30;
+  }
+}
+
